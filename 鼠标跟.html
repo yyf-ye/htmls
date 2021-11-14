@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- ① 鼠标不断的移动，使用鼠标移动事件： mousemove
+        ② 在页面中移动，给document注册事件
+        ③ 图片要移动距离，而且不占位置，我们使用绝对定位即可
+        ④ 核心原理： 每次鼠标移动，我们都会获得最新的鼠标坐标， 把这个x和y坐标做为图片的
+        top和left 值就可以移动图片 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件委托</title>
+    <style>
+        body {
+            height: 4000px;
+        }
+        
+        img {
+            position: absolute;
+            top: 2px;
+        }
+    </style>
+</head>
+  <!-- 鼠标不断的移动，使用鼠标移动事件: mousemove在页面中移动，给document注册事件
+图片要移动距离，而且不占位置，我们使用绝对定位即可
+核心原理︰每次鼠标移动，我们都会获得最新的鼠标坐标，把这个x和y坐标做为图片的
+top和left值就可以移动图片 -->
+<body>
+    <img src="images/angel.gif" alt="">
+    <script>
+        var pic = document.querySelector('img');
+        document.addEventListener('mousemove', function(e) {
+            // mousemove只要我们移动鼠标移动1px,就会触发这个事
+            var x = e.pageX;
+            var y = e.pageY;
+            console.log ('x坐标是'+x,'y坐标是'+y);
+            pic.style.top = y - 40 + 'px';
+            pic.style.left = x - 50 + 'px';
+            //     pic.style.top = y + 'px';
+            //     pic.style.left = x + 'px';
+        })
+    </script>
+</body>
+
+</html>

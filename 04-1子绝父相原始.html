@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学车在线首页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box-bd {
+            /* 子绝父相:父元素相对定位 */
+            position: relative;
+            width: 228px;
+            height: 270px;
+            background-color: #fff;
+            margin-top: 150px;
+            margin-left: 150px;
+        }
+        /* .box-bd > img { */
+        .box-bd >img {
+            width: 100%;
+        }
+        .box-bd em{
+            position: absolute;
+            top: 10px;
+            right: -5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box-bd">
+        <em>
+            <img src="images/hot.png" alt="">
+        </em>
+        <img src="images/pic.png" alt="">
+        <h4>
+            Think PHP 5.0 博客系统实战项目演练
+        </h4>
+        <div class="info">
+            <span>高级</span> • 1125人在学习
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定位堆叠</title>
+</head>
+<style>
+    div {
+        position: fixed;
+        height: 400px;
+        width: 400px;
+    }
+    
+    .xiongda {
+        top: 0px;
+        left: 0px;
+        z-index: 3;
+        background-color: aqua
+    }
+    
+    .xionger {
+        top: 50px;
+        left: 50px;
+        z-index: 1;
+        background-color: blue;
+    }
+    
+    .people {
+        top: 100px;
+        left: 100px;
+        z-index: 2;
+        background-color: pink;
+    }
+</style>
+
+<body>
+
+    <div class="xiongda">熊大</div>
+    <div class="xionger">熊二</div>
+    <div class="people">人</div>
+
+</body>
+
+<ml>

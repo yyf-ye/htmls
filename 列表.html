@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>列表</title>
+</head>
+
+<body>
+    <ul>
+        <!-- 无序列表 -->
+        <li>3</li>
+        <li>2</li>
+        <li>1</li>
+    </ul>
+    <!-- 有序列表 -->
+    <ol>
+        <li>3</li>
+        <li>2</li>
+        <li>1</li>
+    </ol>
+    <!-- 自定义列表 -->
+    <dl>
+        <dt>乱噶嗷嗷</dt>
+        <dt>csndssj</dt>
+        <dt>csnjsnj</dt>
+        <dt>cscsjks</dt>
+    </dl>
+    <form action="demo.php" method="post" name='name1'>
+        用户名字：<input type="text" value="请输入用户名字"> &nbsp;&nbsp;&nbsp;&nbsp;
+        密码:<input type="password" value="" name="password"><br>
+        性别:<br>
+        <!-- 每一组单选按钮的标签name属性值必须一致 -->
+        <img src="down.jpg">
+        <input type="radio" value="男" name="sex" checked='checked'>男<br>
+        <img src="up.jpg">
+        <input type="radio" value="女" name="sex" checked='checked'>女<br/>
+        爱好:<br>
+        <!-- 复选框支持多项选择,要求每一个选项名字保持一致 -->
+        <input type="checkbox" value="音乐" name="爱好" >音乐
+        <input type="checkbox" value="体育" name="爱好" >体育
+        <input type="checkbox" value="绘画"  name="爱好" >绘画
+        <br>
+        输入验证码:
+        <input type="text" value="" name="msgcode">
+        <input type="button" value="获取短信验证码" name="msgcode">
+        <br> 手机号:<input type="text" value=" " name="phone"><br>
+        <!-- reset会清空所有表单数据,submit提交数据给后台 -->
+        <input type="reset" value="重置" >
+        <input type="submit" value="注册" >
+        从事的行业：
+        <select>
+            <option>教育</option>
+            <option>医疗</option>
+            <option>交通运输</option>
+            <option>服务</option>
+        </select><br>
+        自我介绍:<br>
+        <textarea rows="5" cols="120">我是一个xxx</textarea><br>
+    </form>
+</body>
+
+</html>

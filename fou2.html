@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>左右各浮动</title>
+    <style>
+        /* 请给一个 200*200的盒子，设置上边框为红色，其余边框为蓝色 */
+        .left{
+            float: left;
+            width: 234px;
+            height: 615px;
+            background-color: blue;
+        }
+        .right{
+            float: left;
+            width: 992px;
+            height: 615px;
+            background-color: rgb(135, 135, 231);
+        }
+        .right>div{
+            float: left;
+            width: 234px;
+            height: 300px;
+            background-color: rgb(241, 163, 202);
+        
+            background-color: chartreuse;
+            margin: 0 auto;
+        }
+        .box li{
+            float: left;
+           width: 296px;
+            height: 280px;
+            background-color: rgb(57, 207, 207);
+            float: left;
+            margin: 3px;
+        }
+        /* 这里必须写.box .last要注意权重的问题20 */
+        .box .last{
+            margin: auto;
+        }
+        .box .frist{
+            float: left;
+            width: 296px;
+            height: 570px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="box">
+    <div class="left">zoiuuii</div>
+    <div class="right">cdefsfvd</div>
+</div> -->
+
+    <!-- <ul class="box">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li class="last">4</li> -->
+        <ul class="box">
+            <li class="frist">0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li class="last">4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li class="last">8</li>
+    </ul>
+</body>
+</html>

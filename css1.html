@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css1</title>
+    <style>
+        h1{
+            /* 本质是让h1 盒子里面文字水平居中对齐,text-align:center */
+            text-align:center ;
+        }
+        /* 下划线 */
+        h2{
+            text-align:center ;
+            text-decoration: underline;
+        }
+        /* 中横线 */
+        h3{
+            text-decoration: line-through;
+        }
+        h4{/* 上划线 */
+            text-decoration: overline;
+        }
+        p{
+            /* 首行缩进2个字符*/
+            text-indent: 2em;
+        }
+        .btn{
+            font-weight: 700;
+        }
+        .pic{
+            /* 想要图片居中对齐,则是让它的父亲p标签添加水平居中的代码 */
+            text-align: center;
+        }
+       
+        h2{
+            color: green;
+            /* font-family: '微软雅黑';
+            font-size: 16px;
+            font-weight: 900;
+            font-style:italic ; */
+            /*  font-weight字体宽度 ,font-style:italic 字体风格倾下面是上面的合体简写*/
+            font: italic 60 30px '微软雅黑';
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        .reddiv{
+            background-color: red;
+        }
+/* 使用多个类选择器进行渲染 */
+        .greendiv{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2>案例</h2>
+    <p>第一个样式</p>
+    <div class="box greendiv" >绿色</div>
+    <div id="first" class="box reddiv">红色</div>
+    <h2>pink的秘密</h2>
+    <p>那一抹众人中最漂亮的颜色,</p>
+    <p>优雅,淡然,又那么心中清澈.</p>
+    <p>前端总是伴随着困难和犯错,</p>
+    <p>静心,坦然,攻克一个又一个.</p>
+    <p>拼死也要克服它,</p>
+    <p>这是pink的秘密也是老师最终的嘱托.</p>
+</body>
+</html>
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 请给一个 200*200的盒子，设置上边框为红色，其余边框为蓝色 */
+        .nav{
+            height: 41px;
+            border-top:3px solid #fcdffc ;
+            background-color:cadetblue ;
+            line-height:41px ;
+        }
+        .nav a{
+            /* 转为行内块,设置高度`宽度`内边距``字体样式`字体大小 */
+            display: inline-block;
+            height: 41px;
+            width: 80px;
+            padding: 0 30px;
+            font-size: 12px;
+            color: black;
+            text-decoration: none;
+        }
+        .nav a:hover{
+            background-color: aqua;
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="#">设为首页</a>
+        <a href="#">手机新浪</a>
+        <a href="#">移动端</a>
+        <a href="#">播客</a>
+    </div>
+</body>
+</html>

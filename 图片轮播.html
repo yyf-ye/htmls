@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片轮播</title>
+    <style>
+        /* 去除全部样式,*表示全局声明div的边框外部和元素距离为0。
+        margin：0就是div边框外部 元素距离此DIV 0像素，四周都是。padding：0 就是边框内部 元素距离此DIV边框 0像素。
+全等于0 一般就是 无封紧贴着的意思,是以前常见的一种 "重置" 样式
+把所有网页内的元素都紧紧贴在一起的意思，因为浏览器的不同会产生不同的默认元素样式，
+例如 <p> 就会自动默认(隐藏地)加上 margin: 0 0 1em;
+所以 * { margin: 0; padding: 0; } 主要用途就是帮助你重置不同的浏览器默认样式，以达到不同浏览器显示网页的结果不会差太远的效果 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        .tb-promo{
+            /* 父盒子相对定位 */
+            position: relative;
+            /* margin负值往左边走 自己盒子宽度一半 */
+            margin: 100px auto;
+            width: 520px;
+            height: 280px;
+            background-color: cadetblue;
+        }
+        .tb-promo img{
+            width: 100%;
+            height: 100%;
+        }
+        .prev,
+        .next{
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            width: 20px;
+            height: 20px;
+            background-color: rgba(110, 0, 0, 0.7);
+            /* 0.7透明度 3成*/
+            color: white;
+            line-height: 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .tb-promo .prev{
+            left: 0;
+            border-top-left-radius:7px ;
+            border-bottom-left-radius: 7px;
+        }
+        .tb-promo .next{
+            right: 0;
+            border-top-right-radius:7px ;
+            border-bottom-right-radius: 7px;
+        } 
+        .promo-nav{
+            position: absolute;
+            bottom: 30px;
+            width: 70px;
+            height: 15px;
+            background-color: rgba(255, 0, 0,0.5);
+            /* 小盒子水平居中 */
+            margin-left: 400px;
+        }
+        .promo-nav li{
+            float: left;
+            width: 8px;
+            height: 8px;
+            background-color: beige;
+            margin: 3px;
+            border-radius: 4px;
+        }
+        .promo-nav .selected{
+            background-color: rgb(231, 19, 231);
+        }
+    </style>
+</head>
+<body>
+    <div class="tb-promo">
+        <img src="images/pic.png" alt="">
+        <!-- 左侧箭头 -->
+        <a href="#" class="prev">&lt</a>
+         <!-- 右侧箭头 -->
+         <a href="#" class="next">&gt</a>
+         <!-- 小圆点 -->
+         <ul class="promo-nav">
+             <li class="selected"></li>
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+         </ul>
+    </div>
+</body>
+</html>

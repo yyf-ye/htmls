@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外部样式表</title>
+    <link rel='stylesheet' href='style.css'>
+    <style>
+        /* 子选择器 */
+        /* ol > a{
+            color:red
+        } */
+        /* 后代选择器 */
+        /* ol li a{
+            color: rgb(23, 24, 26);
+        } */
+        /* 并集选择器 */
+        /* div,p,span,li{
+            color:rgb(255, 0, 119)
+        } */
+        /* 伪内链接选择器,1.未访问链接a:link  把没有点击过(访问过)链接选出来*/
+        a:link{
+            color: brown;
+            text-decoration: aqua;
+        }
+        /*2.-a : visited ·-选择点击过的(访问过的)链接·*/
+        a:visited {
+                color:  orange;
+        }
+        /*3. a : hover·选择鼠标经过的那个链接·*/
+        a:hover{
+            color:cadetblue;
+        }
+        /* 4. a:active 选择的是我们鼠标正在按下还没有弹起鼠标的那个链接*/
+        a:active {
+            color: yellow;
+        }
+        input:focus{
+            background-color:limegreen;
+        }
+        div{
+            width: 200px;
+            height: 300px;
+            background-color:red ;
+        }
+    </style>
+</head>
+<body>
+    <span>pink老师你怎么</span>
+    <strong>品如的衣服</strong>
+    <input type="text">
+    <input type="text2">
+    <a href="http://www,baidu.com">小猪佩奇</a>
+    <div>块1</div><div>块2</div>
+    <span>行内元素1</span><span>行内元素2</span>
+    <p>这是一个段落开始</p>
+    <div>块3</div>
+    <ol>
+        <a href="#">错误写法</a>
+        <li>我是ol孩子</li>
+        <li>我是l孩子</li>
+        <li><a href="#">我是孙子</a></li>
+    </ol>
+    <ul>
+        <li>我是ul孩子</li>
+        <li>我是ul孩子</li>
+        <li>我是ul孩子</li>
+        <li><a href="#">我是孙子</a></li>
+    </ul>
+        <div>xda1</div>
+        <p>ds2</p>
+        <span>ds3</span>
+           <li><a href="#">我是复合选择器</a></li>
+           <ul class="pig">
+               <li>zhu</li>
+               <li>并集选择器这是</li>
+           </ul>
+
+           
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16-显示隐藏文本框内容</title>
+</head>
+<body>
+    <input type="text" value="手机">
+    <script>
+        // 1.获取元素
+        var text=document.querySelector('input');
+        // 2.注册事件获得焦点事件 onfocus
+        text.onfocus=function(){
+            console.log('得到了焦点');
+            // ===代表全等,即等于类型又等于值
+            if(this.value==="手机"){
+                this.value=' ';
+              }
+//获得焦点需要把文本框里面的文字颜色变黑
+            this.style.color = '#333' ;
+          }
+        //   对于JavaScript程序的调试，相比于alert()，使用console.log()是一种更好的方式，原因在于：alert()函数会阻断JavaScript程序的执行，从而造成副作用；而console.log()仅在控制台中打印相关信息，因此不会造成类似的顾虑
+// 除了一些很老版本的浏览器，现今大多数浏览器都自带调试功能；即使没有调试功能，也可以通过安装插件来进行补充。比如，老版本的Firefox没有自带调试工具，在这种情况下可以通过安装Firebug插件来添加调试功能。在具备调试功能的浏览器上，window对象中会注册一个名为console的成员变量，指代调试工具中的控制台。通过调用该console对象的log()函数，可以在控制台中打印信息。比如，以下代码将在控制台中打印”Sample log”
+    // 3．注册事件失去焦点事件onblur,console.log()还可以接受变量作为参数传递到字符串中
+        text.onblur=function(){
+            console.log('失去了焦点');
+            if (this.value===' '){
+                this.value='手机';
+            }
+//失去焦点需要把文本框里面的文字颜色变浅色
+            this.style.color='#999';
+        }
+    </script>
+</body>
+</html>

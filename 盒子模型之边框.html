@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 请给一个 200*200的盒子，设置上边框为红色，其余边框为蓝色 */
+        div {
+            width: 300px;
+            height:200px;
+            border-top: 1px solid;
+            text-align: center;
+            color: rgb(223, 115, 115);
+            text-decoration: none;
+            line-height: 40px;
+        }
+        
+        div.bg1{
+            background: url(./images/bg1.png)  no-repeat;
+        }
+        div.bg1:hover{
+            background-image: url(./images/bg11.png) ;
+        }
+        div.bg2{
+            background: url(./images/bg2.png) no-repeat;
+        }
+        div.bg2:hover{
+            background-image: url(./images/bg22.png);
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#" class="bg1" >五彩导航</a>
+        <a href="#" class="bg2" >五彩导航</a>
+        <a href="#">五彩导航</a>
+        <a href="#">五彩导航</a>
+        <a href="#">五彩导航</a>
+    </div>
+</body>
+</html>    

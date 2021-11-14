@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>弹幕案例</title>
+</head>
+<style>
+    textarea {
+        border-color: pink;
+    }
+    li {
+        margin-bottom: 14px;
+        background-color: rgb(245, 209, 243);
+        color: red;
+    }
+</style>
+<body>
+    <textarea rows=10 cols=30 id="txt"></textarea>
+    <button type="button" id=btn>发布</button>
+    <ul id="hh">
+    </ul>
+    <script>
+        document.getElementById("btn").onclick = function() {
+            var txtx = document.getElementById("txt").value;
+            if (txtx.trim() == "") {
+                alert("亲，你没有输入内容哦！");
+                return false;
+            }
+            var li = document.createElement("li");
+            hh.insertBefore(li, hh.firstChild);
+            li.innerHTML = "<li>" + txtx +"<br>"+ "</li>";
+            document.getElementById("txt").value = "";
+            // 把空的值赋给id名为txt的元素的value值,把空显示在
+            // innerText属性用来定义对象所要输出的文本，在本例中innerText把对象DT中的文本“您好吗?”变成了“我很好!”（语句 DT.innerText="我很好!"）
+
+
+        }
+    </script>
+</body>
+
+</html>

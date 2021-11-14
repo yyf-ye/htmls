@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="time">2019-9-9</div>
+    <!-- 1．因为我们文档页面从上往下加载，所以先得有标签所以我们script写到标签的下面
+    2. get获得element*元素by通过驼峰命名法, 3．参数id是大小写敏感的字符串
+    4．返回的是一个元素对象 -->
+    <ul>
+        <li>红</li>
+        <li>黄</li>
+        <li>蓝</li>
+    </ul>
+    <script>
+        // timer1=document.getElementById("time")
+        // document.getElementById("time")
+        li=document.getElementsByTagName("li")
+        // li=document.getElementsByTagName("div")
+        //console.log(li)//获取所有元素集合
+        console.log(li[0])//获取第一个元素
+
+        // var timer=document.getElementById('time');
+        // console.log(timer);
+        // console.log(typeof timer);
+        // // console.dir打印我们返回的元素对象,更好的查看里面的属性和方法
+        // console.dir(timer);
+</script>
+</body>
+</html>

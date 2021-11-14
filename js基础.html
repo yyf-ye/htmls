@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 加载外部JavaScript -->
+    <script>alert('网页加载中...')</script>
+    <script src="my.js"></script>
+    <!-- 内嵌js -->
+    <script>
+        alert('网页加载');
+        // var a=10;
+        // var b;       
+        // var c=a+b;
+        // console.log(a);
+        // console.log(b);
+        // console.log(c);
+        // console.log(isNaN(c));
+        // function sumFun(){
+        //     console.log(arguments)
+        //     var sum=0;
+        //     for(var i=0;i<arguments.length;i++){
+        //         sum=arguments[i];
+        //     }
+        //     return sum;
+
+        // }
+        // console.log(sumFun(1,3,5));
+        // console.log(sumFun(2,4,6));
+        // 变量未直接声明为全局变量,不提倡
+        var num=10;
+        function fn(){
+            console.log(num);//undef,因为预解析
+            var num=20;
+            console.log(num);//20
+        }
+        // 全局作用域执行
+        num=10;
+        fn();
+        //相当于执行了以下代,等价于全局作用域提升
+        //  var num=10;
+        //  function fn() {局部域提升
+        //      var num;
+        //      console.log( num) ; //undefined
+        //      num = 20;
+        //      console.log(num);//20
+        // }
+        // 全局作用域执行
+        // num=10;
+        // fn();
+    </script>
+</head>
+<body>
+<!-- 点击按钮显示早上好 -->
+    <button type="button" onclick="alert('早上好');">我的第一个js</button>
+</body>
+</html>
+<!-- 1. js的三种使用方式:行内式、内部js，外部js 。
+2. js的调试:console.log(); alert();
+3.js的三个组成部分，js基础语法、Dom，Bom;4.js基础语法注意点:
+4.1变显定义使用var;4.1比较运算︰-=，=--4.2数组类型Array
+4.3对象三种创建方式
+4.4变量和函数的提示，预解析;
+5.帮助文档MDN: https:/ /devcloper.mozilla.org/zh-CN/ -->
